@@ -1,0 +1,16 @@
+Checklist para agregar conector a Mig
+======================================
+1. Crear conector
+	- Heredar de ConectorAbstracto
+	- Crear constructor
+	- Sobreescribir cargarLista() y armarSQL()
+2. Crear un item de migración para el conector
+	- Implementar IFItemMigracion
+	- Crear miembros sui-géneris
+	- Sobreescribir gerCanonicalString()
+3. Crear un creador para el conector
+	- Heredar de CreadorArbstracto
+	- sobreescribir matches()
+	- sobreescribir crearConector()
+4. Registrar el creador en ListaCreadores
+5. Agregar tag del conector al archivo conectores.conf
